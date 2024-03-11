@@ -1,0 +1,520 @@
+<HTML>
+<!-- saved from url=(0040)https://nexxus.eco/nsk/public/pickuptest -->
+<html lang="nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+    <title>Nexxus pickup form test</title>
+  <script type="text/javascript" async="" src="./Nexxus pickup form_files/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-6QAkKomkqvpLp4cQIWQ+jygFIfYhWZ8e6+BssYf6OcLFi0/C1rhftlXMNkaG16WA"></script><link rel="stylesheet" type="text/css" href="./Nexxus pickup form_files/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="./Nexxus pickup form_files/uploadifive.css"><link rel="stylesheet" type="text/css" href="./Nexxus pickup form_files/uploadcustomize.css"></head>
+  <body>
+  
+	<div id="pickupform" style="margin: 50px; width: 800px"><div id="pickupform"><form name="pickup_form" method="post" class="form-horizontal">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Uw gegevens
+    </div>
+    <div class="panel-body">
+          <div class="form-group">
+            <label class="col-sm-3 control-label required" for="pickup_form_supplier_name">Contactpersoon</label>
+            <div class="col-sm-9">
+              <input type="text" id="pickup_form_supplier_name" name="pickup_form[supplier][name]" class="form-control" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label required" for="pickup_form_supplier_company_name">Bedrijfsnaam van de klant *</label>
+            <div class="col-sm-9">
+              <input type="text" id="pickup_form_supplier_company_name" name="pickup_form[supplier][company_name]" required="required" class="form-control" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label required" for="pickup_form_supplier_email">E-mail *</label>
+            <div class="col-sm-9">
+              <input type="text" id="pickup_form_supplier_email" name="pickup_form[supplier][email]" required="required" class="form-control" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label required" for="pickup_form_supplier_phone">Telefoon *</label>
+            <div class="col-sm-9">
+              <input type="text" id="pickup_form_supplier_phone" name="pickup_form[supplier][phone]" required="required" class="form-control" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label required" for="pickup_form_supplier_street">Straat + nr *</label>
+            <div class="col-sm-9">
+              <input type="text" id="pickup_form_supplier_street" name="pickup_form[supplier][street]" required="required" class="form-control" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label required" for="pickup_form_supplier_zip">Postcode</label>
+            <div class="col-sm-9">
+              <input type="text" id="pickup_form_supplier_zip" name="pickup_form[supplier][zip]" class="form-control" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label required" for="pickup_form_supplier_city">Woonplaats *</label>
+            <div class="col-sm-9">
+              <input type="text" id="pickup_form_supplier_city" name="pickup_form[supplier][city]" required="required" class="form-control" value="">
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Ophaaladres(sen)
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+            <label class="col-sm-3 control-label
+              required" for="pickup_form_countAddresses">Aantal ophaaladressen *</label>
+            <div class="col-sm-2">
+              <input type="number" id="pickup_form_countAddresses" name="pickup_form[countAddresses]" required="required" class="form-control" value="0">
+            </div>
+            <div class="col-sm-7" style="margin-top: 7px">
+              Zet op 0 indien ophaaladres gelijk is aan adres hierboven.
+            </div>
+      </div>
+        <div class="form-group" style="display: none;">
+          <label class="col-sm-3 control-label" for="pickup_form_address0">Ophaaladres 1</label>
+          <div class="col-sm-4">
+            <input type="text" id="pickup_form_address1" name="pickup_form[addresses][0][address]" class="pickup_form_address form-control" placeholder="Straat + nr *">
+          </div>
+          <div class="col-sm-2">
+            <input type="text" id="pickup_form_address_zip_0" name="pickup_form[addresses][0][address_zip]" placeholder="Postcode" class="form-control">
+          </div>
+          <div class="col-sm-3">
+            <input type="text" id="pickup_form_address_city_0" name="pickup_form[addresses][0][address_city]" placeholder="Woonplaats" class="form-control">
+          </div>
+        </div>
+        <div class="form-group" style="display: none;">
+          <label class="col-sm-3 control-label" for="pickup_form_address1">Ophaaladres 2</label>
+          <div class="col-sm-4">
+            <input type="text" id="pickup_form_address2" name="pickup_form[addresses][1][address]" class="pickup_form_address form-control" placeholder="Straat + nr *">
+          </div>
+          <div class="col-sm-2">
+            <input type="text" id="pickup_form_address_zip_1" name="pickup_form[addresses][1][address_zip]" placeholder="Postcode" class="form-control">
+          </div>
+          <div class="col-sm-3">
+            <input type="text" id="pickup_form_address_city_1" name="pickup_form[addresses][1][address_city]" placeholder="Woonplaats" class="form-control">
+          </div>
+        </div>
+        <div class="form-group" style="display: none;">
+          <label class="col-sm-3 control-label" for="pickup_form_address2">Ophaaladres 3</label>
+          <div class="col-sm-4">
+            <input type="text" id="pickup_form_address3" name="pickup_form[addresses][2][address]" class="pickup_form_address form-control" placeholder="Straat + nr *">
+          </div>
+          <div class="col-sm-2">
+            <input type="text" id="pickup_form_address_zip_2" name="pickup_form[addresses][2][address_zip]" placeholder="Postcode" class="form-control">
+          </div>
+          <div class="col-sm-3">
+            <input type="text" id="pickup_form_address_city_2" name="pickup_form[addresses][2][address_city]" placeholder="Woonplaats" class="form-control">
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Op te halen materialen
+    </div>
+    <div class="panel-body">
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_1">Computer</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_1" name="pickup_form[quantityAddresses][0][type_id_1]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_1" name="pickup_form[quantityAddresses][1][type_id_1]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_1" name="pickup_form[quantityAddresses][2][type_id_1]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_2">Laptop</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_2" name="pickup_form[quantityAddresses][0][type_id_2]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_2" name="pickup_form[quantityAddresses][1][type_id_2]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_2" name="pickup_form[quantityAddresses][2][type_id_2]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_3">Accu Laptop</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_3" name="pickup_form[quantityAddresses][0][type_id_3]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_3" name="pickup_form[quantityAddresses][1][type_id_3]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_3" name="pickup_form[quantityAddresses][2][type_id_3]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_4">Oplader</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_4" name="pickup_form[quantityAddresses][0][type_id_4]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_4" name="pickup_form[quantityAddresses][1][type_id_4]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_4" name="pickup_form[quantityAddresses][2][type_id_4]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_5">Server</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_5" name="pickup_form[quantityAddresses][0][type_id_5]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_5" name="pickup_form[quantityAddresses][1][type_id_5]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_5" name="pickup_form[quantityAddresses][2][type_id_5]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_6">Monitor plat</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_6" name="pickup_form[quantityAddresses][0][type_id_6]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_6" name="pickup_form[quantityAddresses][1][type_id_6]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_6" name="pickup_form[quantityAddresses][2][type_id_6]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_7">SmartBoard</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_7" name="pickup_form[quantityAddresses][0][type_id_7]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_7" name="pickup_form[quantityAddresses][1][type_id_7]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_7" name="pickup_form[quantityAddresses][2][type_id_7]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_8">Toetsenbord</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_8" name="pickup_form[quantityAddresses][0][type_id_8]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_8" name="pickup_form[quantityAddresses][1][type_id_8]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_8" name="pickup_form[quantityAddresses][2][type_id_8]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_9">Muis</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_9" name="pickup_form[quantityAddresses][0][type_id_9]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_9" name="pickup_form[quantityAddresses][1][type_id_9]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_9" name="pickup_form[quantityAddresses][2][type_id_9]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_10">Kabels</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_10" name="pickup_form[quantityAddresses][0][type_id_10]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_10" name="pickup_form[quantityAddresses][1][type_id_10]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_10" name="pickup_form[quantityAddresses][2][type_id_10]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_11">Telefoon</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_17" name="pickup_form[quantityAddresses][0][type_id_17]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_17" name="pickup_form[quantityAddresses][1][type_id_17]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_17" name="pickup_form[quantityAddresses][2][type_id_17]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_12">Camera</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_18" name="pickup_form[quantityAddresses][0][type_id_18]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_18" name="pickup_form[quantityAddresses][1][type_id_18]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_18" name="pickup_form[quantityAddresses][2][type_id_18]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_13">Printer</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_19" name="pickup_form[quantityAddresses][0][type_id_19]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_19" name="pickup_form[quantityAddresses][1][type_id_19]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_19" name="pickup_form[quantityAddresses][2][type_id_19]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_14">Printer op wielen</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_20" name="pickup_form[quantityAddresses][0][type_id_20]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_20" name="pickup_form[quantityAddresses][1][type_id_20]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_20" name="pickup_form[quantityAddresses][2][type_id_20]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_15">Overig</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_24" name="pickup_form[quantityAddresses][0][type_id_24]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_24" name="pickup_form[quantityAddresses][1][type_id_24]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_24" name="pickup_form[quantityAddresses][2][type_id_24]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_16">TonerCartridges</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_26" name="pickup_form[quantityAddresses][0][type_id_26]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_26" name="pickup_form[quantityAddresses][1][type_id_26]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_26" name="pickup_form[quantityAddresses][2][type_id_26]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <label class="col-sm-3 control-label" for="pickup_form_quantity_1_17">Tablet</label>
+        <div class="col-sm-9">
+          <table>
+            <tbody>
+              <tr>
+                  <td style="padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_1_28" name="pickup_form[quantityAddresses][0][type_id_28]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_1 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 1">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_2_28" name="pickup_form[quantityAddresses][1][type_id_28]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_2 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 2">
+                  </td>
+                  <td style="display:none; padding: 0px;">
+                    <input type="number" id="pickup_form_quantity_3_28" name="pickup_form[quantityAddresses][2][type_id_28]" style="max-width: 100px;" class="pickup_form_quantity pickup_form_quantity_3 form-control" placeholder="0" data-toggle="tooltip" title="" data-original-title="Aantal voor adres 3">
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Extra informatie
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="pickup_form_pickupDate">Gewenste ophaaldatum</label>
+        <div class="col-sm-9"><input type="date" id="pickup_form_pickupDate" name="pickup_form[pickupDate]" class="form-control"></div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="pickup_form_description">Toelichting</label>
+        <div class="col-sm-9"><textarea id="pickup_form_description" name="pickup_form[description]" class="form-control"></textarea></div>
+      </div> 
+      
+      <div class="form-group">
+        <label class="col-sm-3 control-label required" for="pickup_form_dataDestruction">Vernietiging data</label>
+        <div class="col-sm-9">
+          <select id="pickup_form_dataDestruction" name="pickup_form[dataDestruction]" class="form-control">
+              <option value="4"> HDD wipe report </option>
+              <option value="0"> Geen HDD aangeleverd </option>
+              <option value="3"> HDD op locatie shredden a €12,50 (extra 0.89ct per KM) </option>
+          </select>
+        </div>
+      </div>
+      <hr>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="pickup_form_imagesInput">Afbeeldingen</label>
+            <div class="col-sm-9">
+              <input type="file" id="pickup_form_imagesInput" name="imagesInput" class="filepond" style="display: none;" multiple="multiple" accept="image/*">
+              <div id="uploadifive-pickup_form_imagesInput" class="uploadifive-button" style="height: 30px; line-height: 30px; overflow: hidden; position: relative; text-align: center; width: 100px; user-select: none;">Select Files
+              </div>
+              <div id="pickup_form_imagesInputPreview" class="uploadifive-queue image-preview"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="pickup_form_agreementInput">Verwerkingsovereenkomst</label>
+            <div class="col-sm-9">
+              <input type="file" id="pickup_form_agreementInput" name="agreementInput" class="filepond" style="display: none;" accept="application/pdf">
+              <div id="uploadifive-pickup_form_agreementInput" class="uploadifive-button" style="height: 30px; line-height: 30px; overflow: hidden; position: relative; text-align: center; width: 100px; user-select: none;">Select Files
+              </div>
+              <div id="pickup_form_agreementInputPreview" class="uploadifive-queue image-preview"></div>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+        
+        <div class="row">
+            <div class="col-sm-9 col-sm-offset-3">
+                <div class="g-recaptcha" data-sitekey="6LdzW4QUAAAAANRAfkgl8Cz4-QNUcNEJomOj5wgX"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-avfxit61tcki" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="./Nexxus pickup form_files/anchor.html"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./Nexxus pickup form_files/saved_resource(1).html"></iframe></div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px">
+            <div class="col-sm-9 col-sm-offset-3">
+                <button type="submit" id="pickup_form_save" name="pickup_form[save]" class="btn-success btn" style="width: 150px;">Send</button>
+            </div>
+        </div>        
+    </div>
+  </div>
+
+  <input type="hidden" id="pickup_form_orderStatusName" name="pickup_form[orderStatusName]" required="required" value="To plan and pickup">
+  <input type="hidden" id="pickup_form_locationId" name="pickup_form[locationId]" required="required" value="1">
+  <input type="hidden" id="pickup_form_confirmPage" name="pickup_form[confirmPage]" value="https://www.copiatek.nl/bedankt">
+  <input type="hidden" id="pickup_form_origin" name="pickup_form[origin]" value="">
+  <input type="hidden" id="pickup_form_maxAddresses" name="pickup_form[maxAddresses]" required="required" value="3"> 
+  </form>
+
+  <div id="errorContainer" style="color: red"></div>
+
+  <script src="./Nexxus pickup form_files/api.js" async="" defer=""></script>
+
+</div>
+</div>
+  
+    <script src="./Nexxus pickup form_files/jquery.min.js"></script>
+    <script src="./Nexxus pickup form_files/jquery.nexxus-pickup.js"></script>
+    <!-- script src="https://nexxus.eco/nsk/js/jquery.nexxus-pickup.js"></script -->
+	<script>
+	
+	    $("#pickupform").nexxusPickup({
+            recaptchaKey: '6LdzW4QUAAAAANRAfkgl8Cz4-QNUcNEJomOj5wgX',
+            maxAddresses: 3,
+            confirmPage: 'https://www.copiatek.nl/bedankt',
+        });
+	
+	</script>
+  
+
+<webchatgpt-custom-element-9ed4d461-4ad8-451e-943c-8c2b6c93225a id="webchatgpt-snackbar" style="color: rgb(255, 255, 255);"><template shadowrootmode="open"><style id="webchatgpt-snackbar-container-emotion-style"></style><div id="webchatgpt-snackbar-container" style="z-index: 2147483647;"></div></template></webchatgpt-custom-element-9ed4d461-4ad8-451e-943c-8c2b6c93225a><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" name="c-avfxit61tcki" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="./Nexxus pickup form_files/bframe.html" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
